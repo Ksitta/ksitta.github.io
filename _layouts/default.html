@@ -6,15 +6,34 @@
     <title>{{ site.title }}</title>
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
-<body>
-    <div class="container">
-        <main>
-            {{ content }}
-        </main>
+<body id="head">
+    <div class="page-layout">
+        <aside class="sidebar-container">
+        </aside>
+        <div class="container">
+            <main>
+                {{ content }}
+            </main>
 
-        <footer>
-            <p>{{ site.data.resume.contact.name }} &copy; {% assign current_year = 'now' | date: "%Y" %} {{ current_year }} {{ site.author }}</p>
-        </footer>
+            <footer>
+                <p>{{ site.data.resume.contact.name }} &copy; {% assign current_year = 'now' | date: "%Y" %} {{ current_year }} {{ site.author }}</p>
+            </footer>
+        </div>
+        <aside class="sidebar-container">
+            <nav class="sidebar-nav">
+                <ul>
+                <li><a href="#head">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#publications">Publications</a></li>
+                <li><a href="#contests">Contests</a></li>
+                <li><a href="#honors">Honors</a></li>
+                <li><a href="#serving">Serving</a></li>
+                <li><a href="#teaching">Teaching</a></li>
+                </ul>
+            </nav>
+        </aside>
     </div>
+    <script src="/assets/js/main.js"></script>
 </body>
+
 </html>
