@@ -1,7 +1,7 @@
 // assets/js/main.js
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.section-container .section-title h2');
+    const sections = document.querySelectorAll('body[id="head"], .section-container .section-title h2');
     const navLinks = document.querySelectorAll('.sidebar-nav li a');
 
     const onScroll = () => {
@@ -27,4 +27,5 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventListener('scroll', onScroll);
+    onScroll();
 });
