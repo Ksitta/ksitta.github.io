@@ -95,8 +95,8 @@ a:hover {
 /* 3. Style for the profile picture within the new layout */
 .profile-pic {
   flex-shrink: 0;
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 15px; /* THIS IS THE CHANGE */
 }
 
@@ -332,7 +332,7 @@ footer {
 .quick-links {
   text-align: center;
   margin-top: 1.5em; /* Space above this block */
-  margin-bottom: 1.5em; /* Space below this block */
+  margin-bottom: 0em; /* Space below this block */
 }
 
 .quick-links a {
