@@ -95,8 +95,8 @@ a:hover {
 /* 3. Style for the profile picture within the new layout */
 .profile-pic {
   flex-shrink: 0;
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 15px; /* THIS IS THE CHANGE */
 }
 
@@ -326,5 +326,37 @@ footer {
 @media (max-width: 1100px) {
   .sidebar-nav {
     display: none; /* Hide the sidebar when there's not enough space */
+  }
+}
+
+.quick-links {
+  text-align: center;
+  margin-top: 1.5em; /* Space above this block */
+  margin-bottom: 1.5em; /* Space below this block */
+}
+
+.quick-links a {
+  display: inline-block;
+  padding: 3px 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-right: 10px;
+  color: #333; /* Use a neutral color, not the theme red */
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.quick-links a:hover {
+  color: #8B0000; /* Use the theme red on hover */
+  transform: translateY(-1px); /* A subtle lift effect */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* Also ensure it centers correctly on mobile */
+@media (max-width: 768px) {
+  /* ... (your other mobile styles) ... */
+  .quick-links {
+     text-align: center; // Match the parent's alignment
   }
 }

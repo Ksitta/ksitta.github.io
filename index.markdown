@@ -23,6 +23,17 @@ layout: default
     <div class="intro-text">
       {{ site.data.resume.contact.intro | markdownify }}
     </div>
+    <div class="quick-links">
+      {% if site.data.resume.contact.github_url %}
+        <a href="{{ site.data.resume.contact.github_url }}" target="_blank" rel="noopener noreferrer">GitHub</a>
+      {% endif %}
+      {% if site.data.resume.contact.scholar_url %}
+        <a href="{{ site.data.resume.contact.scholar_url }}" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+      {% endif %}
+      {% if site.data.resume.contact.cv_url %}
+        <a href="{{ site.data.resume.contact.cv_url }}" target="_blank" rel="noopener noreferrer">CV</a>
+      {% endif %}
+    </div>
   </div>
 
 </div>

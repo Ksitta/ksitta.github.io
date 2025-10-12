@@ -2,7 +2,9 @@ contact:
   name: Ruwen Fan
   icon: avatar.jpg
   intro: I am a Ph.D. student (since 2023) in [Storage Research Group](https://storage.cs.tsinghua.edu.cn/), advised by Professors [Youyou Lu](https://storage.cs.tsinghua.edu.cn/~lu/). My research focuses on building storage system support for machine learning applications.
-
+  github_url: "https://github.com/ksitta"
+  scholar_url: "https://scholar.google.com/citations?user=RhwaJv8AAAAJ"
+  # cv_url: "/assets/pdf/Ruwen_Fan_CV.pdf"
 education:
   - university: Tsinghua University
     department: Department of Computer Science
