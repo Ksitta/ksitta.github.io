@@ -129,16 +129,16 @@ layout: default
 </div>
 
 <!-- ========================================================================= -->
-<!-- Serving Section -->
+<!-- Services Section -->
 <!-- ========================================================================= -->
 <div class="section-container">
   <div class="section-title">
-    <h2 id="serving">Serving</h2>
+    <h2 id="services">Services</h2>
   </div>
   <div class="section-content">
     <ul>
-    {% for ta in site.data.resume.serving %}
-      <li>{{ ta.title }}</li>
+    {% for service in site.data.resume.services %}
+      <li>{{ service.title }}</li>
     {% endfor %}
     </ul>
   </div>
