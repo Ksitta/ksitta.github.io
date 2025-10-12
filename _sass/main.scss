@@ -4,6 +4,8 @@ $secondary-color: #777;
 $background-color: #f4f4f4;
 $container-width: 800px;
 $font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+$theme-color: #8B0000; // 深红色
+$hover-color: #B22222; // 火砖色
 
 // 基础样式
 body {
@@ -41,7 +43,7 @@ main {
     margin-top: 30px;
   }
   h3 {
-    margin-bottom: 5px;
+    margin-bottom: 3px;
   }
 }
 
@@ -52,25 +54,90 @@ footer {
 }
 
 a {
-    color: #007bff;
+  color: $theme-color; /* Deep red for links, matching the section titles */
+  text-decoration: none; /* Remove underline by default */
+  transition: color 0.2s ease; /* Add a smooth transition effect for hover */
+}
+
+a:hover {
+  color: $hover-color; /* A slightly brighter red (Firebrick) on hover */
+  text-decoration: underline; /* Add underline back on hover for clarity */
+}
+
+/* Optional: Make links inside publication titles less dominant */
+.publication-item p strong a {
+    color: inherit; /* The link will inherit the color of its parent (black) */
     text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+}
+
+.publication-item p strong a:hover {
+    color: $theme-color; /* On hover, it turns red and gets an underline */
+    text-decoration: underline;
 }
 
 /* Contact Header Styles */
-.contact-header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2em;
+.main-name {
+  text-align: center; /* Or 'left' if you prefer */
+//   margin-bottom: 1.5em;
 }
 
+/* 2. The new Flexbox container */
+.bio-container {
+  display: flex;
+  align-items: center; /* Aligns items to the center */
+  gap: 20px; /* Space between picture and bio content */
+}
+
+/* 3. Style for the profile picture within the new layout */
 .profile-pic {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-right: 30px;
+  flex-shrink: 0;
+  width: 140px;
+  height: 140px;
+  border-radius: 15px; /* THIS IS THE CHANGE */
+}
+
+/* 4. Style for the content on the right */
+.bio-content {
+  /* This will automatically take up the remaining space */
+  flex-grow: 1;
+}
+
+/* Ensure the paragraph inside the intro text has no top margin */
+.intro-text p:first-child {
+  margin-top: 0;
+}
+
+.contact-details {
+  margin-top: 0em;
+  font-size: 0.9em;
+  color: #555;
+}
+.contact-details p {
+    margin: 0em 0;
+}
+
+/* --- Responsive adjustments for the new layout --- */
+@media (max-width: 768px) {
+  .bio-container {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items when stacked */
+  }
+
+  .bio-content {
+    // margin-top: 1.5em;
+    text-align: center; /* Center the text on mobile */
+  }
+  
+  .intro-text {
+      text-align: justify; /* Justify the main intro paragraph for better reading */
+  }
+
+  .profile-pic {
+    flex-shrink: 0;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;  
+  }
 }
 
 .contact-info {
@@ -107,4 +174,56 @@ ul {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+
+
+/* Section Divider */
+hr.section-divider {
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0));
+  margin: 2em 0 0.5em 0;
+}
+
+
+/* Two-Column Section Layout */
+.section-container {
+  display: grid;
+  grid-template-columns: 160px 1fr; /* Left column 160px, right column takes the rest */
+  gap: 30px; /* Space between the two columns */
+  margin-bottom: 1em; /* Space between sections */
+}
+
+/* Add this rule for the parent container */
+.section-title {
+  text-align: right; /* This will align its inline-block child (the h2) to the right */
+}
+
+/* Modify the existing h2 rule */
+.section-title h2 {
+  display: inline-block; /* THIS IS THE KEY CHANGE: Makes the element only as wide as its content */
+  color: $theme-color; /* Deep red color */
+  border-bottom: 5px solid $theme-color;
+  padding-bottom: 0px;
+  margin-top: 5px;
+  /* The 'text-align' property is no longer needed here */
+}
+
+/* Make it responsive: stack columns on small screens */
+@media (max-width: 768px) {
+  .section-container {
+    grid-template-columns: 1fr; /* A single column */
+    gap: 0;
+  }
+
+  .section-title {
+    text-align: left; /* THIS IS THE KEY CHANGE! Overrides the desktop 'right' alignment */
+    margin-bottom: 0em; /* Adds space below the title when stacked */
+  }
+
+  /* We don't need to specify h2 alignment here anymore, but we can keep other mobile-only styles if needed */
+  .section-title h2 {
+    text-align: left; /* Align to the left on mobile */
+    margin-bottom: 0em; /* Add space below the title when stacked */
+  }
 }

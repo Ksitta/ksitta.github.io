@@ -3,91 +3,143 @@ layout: default
 ---
 
 <!-- ========================================================================= -->
-<!-- Contact and Introduction Section -->
+<!-- Contact and Introduction Section (This part remains single-column) -->
 <!-- ========================================================================= -->
-<div class="contact-header">
+<!-- ========================================================================= -->
+<!-- NEW Contact and Introduction Section -->
+<!-- ========================================================================= -->
+
+<!-- 1. Name is now on its own, centered or left-aligned -->
+<h1 class="main-name">{{ site.title }}</h1>
+
+<!-- 2. A new container for the side-by-side layout -->
+<div class="bio-container">
+
+  <!-- Left Item: Profile Picture -->
   <img src="/assets/images/{{ site.data.resume.contact.icon }}" alt="Profile Picture" class="profile-pic">
-  <div class="contact-info">
-    <h1>{{ site.title }}</h1>
-    <!-- <p><strong>{{ site.data.resume.contact.pos }}</strong></p>
-    <p>{{ site.data.resume.contact.addr }}</p> -->
-    <!-- <p><strong>Email:</strong> <a href="mailto:{{ site.data.resume.contact.email | replace: ' AT ', '@' | replace: ' dot ', '.' }}">{{ site.data.resume.contact.email | replace: ' AT ', '@' | replace: ' dot ', '.' }}</a></p> -->
+
+  <!-- Right Item: Intro text and other details -->
+  <div class="bio-content">
+    <div class="intro-text">
+      {{ site.data.resume.contact.intro | markdownify }}
+    </div>
   </div>
+
 </div>
 
-<p>{{ site.data.resume.contact.intro }}</p>
+<hr class="section-divider">
 
 <!-- ========================================================================= -->
-<!-- Education Section -->
+<!-- Education Section (New two-column layout starts here) -->
 <!-- ========================================================================= -->
-## Education
+<div class="section-container">
+  <div class="section-title">
+    <h2>Education</h2>
+  </div>
+  <div class="section-content">
+    {% for entry in site.data.resume.education %}
+      <h3>{{ entry.university }}</h3>
+      <div class="detail-line">
+        <span><b>{{ entry.degree }}</b> <em>{{ entry.department }}</em></span>
+        <span><strong>{{ entry.period }}</strong></span>
+      </div>
+      <div class="detail-line">
+        <span></span>
+      </div>
 
-### {{ site.data.resume.contact.name_phd_univ }}
-<div class="detail-line">
-  <span><b>Ph.D. Student</b> <em>{{ site.data.resume.contact.dep_phd_univ }}</em></span>
-  <span><strong>{{ site.data.resume.contact.start2end_phd }}</strong></span>
-</div>
-<div class="detail-line">
-  
-</div>
-
-
-### {{ site.data.resume.contact.name_bs_univ }}
-<div class="detail-line">
-  <span><b>B.S.</b> <em>{{ site.data.resume.contact.dep_bs_univ }}</em></span>
-  <span><strong>{{ site.data.resume.contact.start2end_bs }}</strong></span>
-</div>
-<div class="detail-line">
-  
+      <!-- Add a spacer between entries, but not after the last one -->
+      {% unless forloop.last %}
+        <div class="spacer"></div>
+      {% endunless %}
+    {% endfor %}
+  </div>
 </div>
 <!-- ========================================================================= -->
 <!-- News Section -->
 <!-- ========================================================================= -->
-<!-- ## News
-<ul>
-{% for item in site.data.resume.news %}
-  <li>{{ item.title }}</li>
-{% endfor %}
-</ul> -->
+<!-- <div class="section-container">
+  <div class="section-title">
+    <h2>News</h2>
+  </div>
+  <div class="section-content">
+    <ul>
+    {% for item in site.data.resume.news %}
+      <li>{{ item.title }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div> -->
 
 <!-- ========================================================================= -->
 <!-- Publications Section -->
 <!-- ========================================================================= -->
-## Publications
-<div class="publications">
-{% for pub in site.data.resume.pubs %}
-  <div class="publication-item">
-    <p><strong><a href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></strong></p>
-    <p>
-      {% for author_entry in pub.authors %}
-        {% if author_entry.author contains site.data.resume.contact.name %}
-          <strong><u>{{ author_entry.author }}</u></strong>{% unless forloop.last %}, {% endunless %}
-        {% else %}
-          {{ author_entry.author }}{% unless forloop.last %}, {% endunless %}
-        {% endif %}
-      {% endfor %}
-    </p>
-    <p><em>{{ pub.pubname }} ({{ pub.pubnamebrief }})</em>, {{ pub.year }}.</p>
+<div class="section-container">
+  <div class="section-title">
+    <h2>Publications</h2>
   </div>
-{% endfor %}
+  <div class="section-content">
+    <div class="publications">
+    {% for pub in site.data.resume.pubs %}
+      <div class="publication-item">
+        <p><strong><a href="{{ pub.link }}" target="_blank">{{ pub.title }}</a></strong></p>
+        <p>
+          {% for author_entry in pub.authors %}
+            {% if author_entry.author contains site.data.resume.contact.name %}
+              <strong><u>{{ author_entry.author }}</u></strong>{% unless forloop.last %}, {% endunless %}
+            {% else %}
+              {{ author_entry.author }}{% unless forloop.last %}, {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </p>
+        <p><em>{{ pub.pubname }} ({{ pub.pubnamebrief }})</em>, {{ pub.year }}.</p>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
 </div>
 
 <!-- ========================================================================= -->
 <!-- Honors & Awards Section -->
 <!-- ========================================================================= -->
-## Honors & Awards
-<ul>
-{% for honor in site.data.resume.honors %}
-  <li>{{ honor.title }}</li>
-{% endfor %}
-</ul>
+
+<div class="section-container">
+  <div class="section-title">
+    <h2>Contests</h2>
+  </div>
+  <div class="section-content">
+    <ul>
+    {% for contest in site.data.resume.contests %}
+      <li><b>{{ contest.prize }}</b>, {{ contest.title }}, {{ contest.year }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div class="section-container">
+  <div class="section-title">
+    <h2>Honors</h2>
+  </div>
+  <div class="section-content">
+    <ul>
+    {% for honor in site.data.resume.honors %}
+      <li>{{ honor.title }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
 
 <!-- ========================================================================= -->
 <!-- Teaching Section -->
 <!-- ========================================================================= -->
-## Teaching & Serving
-<ul>
-{% for ta in site.data.resume.teaching %}
-  <li>{{ ta.title }}</li>
-{% endfor %}
-</ul>
+<div class="section-container">
+  <div class="section-title">
+    <h2>Teaching</h2>
+  </div>
+  <div class="section-content">
+    <ul>
+    {% for ta in site.data.resume.teaching %}
+      <li>{{ ta.title }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>

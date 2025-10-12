@@ -1,16 +1,18 @@
 contact:
   name: Ruwen Fan
-  pos: Ph.D. Student
-  email: frw23 AT mails dot tsinghua dot edu dot cn
   icon: frw-small.jpg
-  addr: "F5, Building 1, Ziqiang Technology Building, Tsinghua University, Beijing, China"
-  intro: I am a Ph.D. student (since 2023), advised by Professors Youyou Lu and Jiwu Shu. My research focuses on building storage system support for machine learning applications.
-  name_bs_univ: Tsinghua University
-  dep_bs_univ:  Department of Computer Science
-  start2end_bs:  2018 - 2023
-  name_phd_univ: Tsinghua University
-  dep_phd_univ: Department of Computer Science
-  start2end_phd: 2023 - Present
+  intro: I am a Ph.D. student (since 2023) in [Storage Research Group](https://storage.cs.tsinghua.edu.cn/), advised by Professors [Youyou Lu](https://storage.cs.tsinghua.edu.cn/~lu/). My research focuses on building storage system support for machine learning applications.
+
+education:
+  - university: Tsinghua University
+    department: Department of Computer Science
+    degree: Ph.D. Student
+    period: 2023 - Present
+
+  - university: Tsinghua University
+    department: Department of Computer Science
+    degree: B.S.
+    period: 2018 - 2023
 
 # Describe your recent news
 news:
@@ -18,13 +20,19 @@ news:
 
 # Describe the honors you have before.
 
-# awards:
+contests:
+  - title: ASPLOS / EuroSys 2025 contest on LLM inference optimization
+    prize: 1st Place
+    year: 2025
+  - title: The 8th CCF TCARCH Computer Architecture Challenge
+    prize: 1st Prize
+    year: 2025
+  - title: CCF TCARCH Student Research Challenge
+    prize: Innovation Award
+    year: 2025
 
 honors:
-  - title: ASPLOS / EuroSys 2025 contest on LLM inference optimization, 1st place, 2025
   - title: Student Travel Grant for ASPLOS'25/EuroSys'25, 2025
-  - title: The 8th CCF TCARCH Computer Architecture Challenge, 1st prize, 2025
-  - title: CCF TCARCH Student Research Challenge, Innovation Award, 2025
   - title: Comprehensive Excellent Scholarship, Tsinghua University, 2024
   - title: Excellent Teaching Assistant Award, Tsinghua University, 2024
   - title: Outstanding Graduates, Department of Computer Science and Technology, Tsinghua University, 2023
@@ -41,6 +49,32 @@ teaching:
   - title: TA, Principles and Practice of Compiler Construction, Autumn 2022
 
 pubs:
+  - title: "GPreempt: GPU Preemptive Scheduling Made General and Efficient"
+    authors:
+      - author: Ruwen Fan
+      - author: Tingxu Ren
+      - author: Minhui Xie
+      - author: Shiwei Gao
+      - author: Jiwu Shu
+      - author: Youyou Lu
+    pubname: USENIX Annual Technical Conference
+    pubnamebrief: USENIX ATC'25
+    year: 2025
+    link: https://www.usenix.org/conference/atc25/presentation/fan
+    type: conference
+    highlight: 1
+    bibtex: |
+      @inproceedings {atc25gpreempt,
+      author = {Ruwen Fan and Tingxu Ren and Minhui Xie and Shiwei Gao and Jiwu Shu and Youyou Lu},
+      title = {{GPreempt: GPU Preemptive Scheduling Made General and Efficient}},
+      booktitle = {2025 USENIX Annual Technical Conference},
+      year = {2025},
+      address = {Boston, MA, USA},
+      pages = {263--272},
+      publisher = {USENIX Association},
+      series = {USENIX ATC '25}
+      }
+
   - title: "MaxEmbed: Maximizing SSD Bandwidth Utilization for Huge Embedding Models Serving"
     authors:
       - author: Ruwen Fan
@@ -70,33 +104,6 @@ pubs:
       keywords = {embedding models, SSD, data placement, data replication},
       location = {Hilton La Jolla Torrey Pines, La Jolla, CA, USA},
       series = {ASPLOS '24}
-      }
-
-
-  - title: "GPreempt: GPU Preemptive Scheduling Made General and Efficient"
-    authors:
-      - author: Ruwen Fan
-      - author: Tingxu Ren
-      - author: Minhui Xie
-      - author: Shiwei Gao
-      - author: Jiwu Shu
-      - author: Youyou Lu
-    pubname: USENIX Annual Technical Conference
-    pubnamebrief: USENIX ATC'25
-    year: 2025
-    link: https://www.usenix.org/conference/atc25/presentation/fan
-    type: conference
-    highlight: 1
-    bibtex: |
-      @inproceedings {atc25gpreempt,
-      author = {Ruwen Fan and Tingxu Ren and Minhui Xie and Shiwei Gao and Jiwu Shu and Youyou Lu},
-      title = {{GPreempt: GPU Preemptive Scheduling Made General and Efficient}},
-      booktitle = {2025 USENIX Annual Technical Conference},
-      year = {2025},
-      address = {Boston, MA, USA},
-      pages = {263--272},
-      publisher = {USENIX Association},
-      series = {USENIX ATC '25}
       }
 
   - title: "Neuralink: Fast on-Device LLM Inference with Neuron Co-Activation Linking"
