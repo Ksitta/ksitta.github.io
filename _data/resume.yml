@@ -1,0 +1,122 @@
+contact:
+  name: Ruwen Fan
+  pos: Ph.D. Student
+  email: frw23 AT mails dot tsinghua dot edu dot cn
+  icon: frw-small.jpg
+  addr: "F5, Building 1, Ziqiang Technology Building, Tsinghua University, Beijing, China"
+  intro: I am a Ph.D. student (since 2023), advised by Professors Youyou Lu and Jiwu Shu. My research focuses on building storage system support for machine learning applications.
+  name_bs_univ: Tsinghua University
+  dep_bs_univ:  Department of Computer Science
+  start2end_bs:  2018 - 2023
+  name_phd_univ: Tsinghua University
+  dep_phd_univ: Department of Computer Science
+  start2end_phd: 2023 - Present
+
+# Describe your recent news
+news:
+  - title: Won the first place at the ASPLOS 2025 / EuroSys 2025 contest on LLM inference optimization.
+
+# Describe the honors you have before.
+
+# awards:
+
+honors:
+  - title: ASPLOS / EuroSys 2025 contest on LLM inference optimization, 1st place, 2025
+  - title: Student Travel Grant for ASPLOS'25/EuroSys'25, 2025
+  - title: The 8th CCF TCARCH Computer Architecture Challenge, 1st prize, 2025
+  - title: CCF TCARCH Student Research Challenge, Innovation Award, 2025
+  - title: Comprehensive Excellent Scholarship, Tsinghua University, 2024
+  - title: Excellent Teaching Assistant Award, Tsinghua University, 2024
+  - title: Outstanding Graduates, Department of Computer Science and Technology, Tsinghua University, 2023
+  - title: Tan Haoqiang Scholarship, Tsinghua University, 2023
+  - title: Comprehensive Excellent Scholarship, Tsinghua University, 2022
+  - title: Academic Excellence Scholarship, Tsinghua University, 2021
+  - title: Social Practice Excellent Scholarship, Tsinghua University, 2021
+
+teaching:
+  - title: TA, Data Structure and Algorithm, Spring 2025
+  - title: TA, Combinatorics and Algorithms Design, Autumn 2024
+  - title: TA, Principles and Practice of Compiler Construction, Autumn 2024
+  - title: TA, Principles and Practice of Compiler Construction, Autumn 2023
+  - title: TA, Principles and Practice of Compiler Construction, Autumn 2022
+
+pubs:
+  - title: "MaxEmbed: Maximizing SSD Bandwidth Utilization for Huge Embedding Models Serving"
+    authors:
+      - author: Ruwen Fan
+      - author: Minhui Xie
+      - author: Haodi Jiang
+      - author: Youyou Lu
+    pubname: The 29th Conference on Architectural Support for Programming Languages and Operating Systems 
+    pubnamebrief: ASPLOS'24
+    year: 2024
+    link: https://dl.acm.org/doi/abs/10.1145/3622781.3674172
+    type: conference
+    highlight: 1
+    bibtex: | 
+      @inproceedings{10.1145/3622781.3674172,
+      author = {Fan, Ruwen and Xie, Minhui and Jiang, Haodi and Lu, Youyou},
+      title = {MaxEmbed: Maximizing SSD bandwidth utilization for huge embedding models serving},
+      year = {2025},
+      isbn = {9798400703911},
+      publisher = {Association for Computing Machinery},
+      address = {New York, NY, USA},
+      url = {https://doi.org/10.1145/3622781.3674172},
+      doi = {10.1145/3622781.3674172},
+      abstract = {Deep learning recommendation models (DLRMs) have gained widespread application across search, advertising, and e-commerce. Still, DLRMs present notable challenges as they depend heavily on large embedding tables to represent sparse features in recommendation systems. This raises concerns about both memory capacity and cost. Solid-state drives (SSDs) offer a cost-effective solution with a significantly larger capacity, but they introduce read amplification issues because of the mismatch between embedding size and SSD read granularity. Prior SSD embedding storage systems aim to tackle these challenges by employing hypergraph partitioning to co-locate co-appearing embeddings onto the same SSD page, alleviating read amplification. However, this approach has a drawback as it divides embeddings into completely disjoint clusters, limiting potential combinations between embeddings.In response to this limitation, we introduce MaxEmbed. Capitalizing on the extensive storage capacity of SSDs, Max-Embed effectively mines relationships between storage combinations of embeddings with replication, thereby enhancing the effective bandwidth of SSDs. Additionally, MaxEmbed incorporates a corresponding online service module for embedding query request handling, leveraging two key optimizations to reduce the overhead brought by replication. Our evaluations demonstrate that MaxEmbed boosts SSD embedding serving throughput by up to 18.7\% under various settings.},
+      booktitle = {Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 4},
+      pages = {188–202},
+      numpages = {15},
+      keywords = {embedding models, SSD, data placement, data replication},
+      location = {Hilton La Jolla Torrey Pines, La Jolla, CA, USA},
+      series = {ASPLOS '24}
+      }
+
+
+  - title: "GPreempt: GPU Preemptive Scheduling Made General and Efficient"
+    authors:
+      - author: Ruwen Fan
+      - author: Tingxu Ren
+      - author: Minhui Xie
+      - author: Shiwei Gao
+      - author: Jiwu Shu
+      - author: Youyou Lu
+    pubname: USENIX Annual Technical Conference
+    pubnamebrief: USENIX ATC'25
+    year: 2025
+    link: https://www.usenix.org/conference/atc25/presentation/fan
+    type: conference
+    highlight: 1
+    bibtex: |
+      @inproceedings {atc25gpreempt,
+      author = {Ruwen Fan and Tingxu Ren and Minhui Xie and Shiwei Gao and Jiwu Shu and Youyou Lu},
+      title = {{GPreempt: GPU Preemptive Scheduling Made General and Efficient}},
+      booktitle = {2025 USENIX Annual Technical Conference},
+      year = {2025},
+      address = {Boston, MA, USA},
+      pages = {263--272},
+      publisher = {USENIX Association},
+      series = {USENIX ATC '25}
+      }
+
+  - title: "Neuralink: Fast on-Device LLM Inference with Neuron Co-Activation Linking"
+    authors:
+      - author: Tuowei Wang*
+      - author: Ruwen Fan*
+      - author: Minxing Huang
+      - author: Zixu Hao
+      - author: Kun Li
+      - author: Ting Cao
+      - author: Youyou Lu
+      - author: Yaoxue Zhang
+      - author: Ju Ren
+    pubname: The 30th Conference on Architectural Support for Programming Languages and Operating Systems 
+    pubnamebrief: ASPLOS' 25
+    year: 2025
+    link: https://dl.acm.org/doi/10.1145/3676642.3736114
+    type: conference
+    highlight: 1
+
+# P.S. 
+# All the publication lists are generated automatically, 
+# so you don't need to include them in this file.
