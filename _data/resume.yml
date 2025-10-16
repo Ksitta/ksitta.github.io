@@ -65,7 +65,7 @@ pubs:
       - author: Shiwei Gao
       - author: Jiwu Shu
       - author: Youyou Lu
-    pubname: USENIX Annual Technical Conference
+    pubname: 2025 USENIX Annual Technical Conference
     pubnamebrief: USENIX ATC'25
     year: 2025
     link: https://www.usenix.org/conference/atc25/presentation/fan
@@ -89,7 +89,7 @@ pubs:
       - author: Minhui Xie
       - author: Haodi Jiang
       - author: Youyou Lu
-    pubname: The 29th Conference on Architectural Support for Programming Languages and Operating Systems 
+    pubname: Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems
     pubnamebrief: ASPLOS'24
     year: 2024
     link: https://dl.acm.org/doi/abs/10.1145/3622781.3674172
@@ -125,7 +125,7 @@ pubs:
       - author: Youyou Lu
       - author: Yaoxue Zhang
       - author: Ju Ren
-    pubname: The 30th Conference on Architectural Support for Programming Languages and Operating Systems 
+    pubname: Proceedings of the 30th ACM International Conference on Architectural Support for Programming Languages and Operating Systems
     pubnamebrief: ASPLOS' 25
     year: 2025
     link: https://dl.acm.org/doi/10.1145/3676642.3736114
