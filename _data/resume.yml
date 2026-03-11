@@ -132,35 +132,35 @@ pubs:
     type: conference
     highlight: 1
 
-- title: "Discard-Based Garbage Collection for Distributed Log-Structured Storage Systems in ByteDance"
-  authors:
-    - author: Runhua Bian
-    - author: Liqiang Zhang
-    - author: Jinxin Liu
-    - author: Jiacheng Zhang
-    - author: Jianong Zhong
-    - author: Jiahao Gu
-    - author: Hao Guo
-    - author: Zhihong Guo
-    - author: Yunhao Li
-    - author: Fenghao Zhang
-    - author: Jiangkun Zhao
-    - author: Yangming Chen
-    - author: Guojun Li
-    - author: Ruwen Fan
-    - author: Haijia Shen
-    - author: Chengyu Dong
-    - author: Yao Wang
-    - author: Rui Shi
-    - author: Jiwu Shu
-    - author: Youyou Lu
-  pubname: The 24th USENIX Conference on File and Storage Technologies
-  pubnamebrief: FAST'26
-  year: 2026
-  link:
-  code:
-  type: conference
-  highlight: 1
+  - title: "Discard-Based Garbage Collection for Distributed Log-Structured Storage Systems in ByteDance"
+    authors:
+      - author: Runhua Bian
+      - author: Liqiang Zhang
+      - author: Jinxin Liu
+      - author: Jiacheng Zhang
+      - author: Jianong Zhong
+      - author: Jiahao Gu
+      - author: Hao Guo
+      - author: Zhihong Guo
+      - author: Yunhao Li
+      - author: Fenghao Zhang
+      - author: Jiangkun Zhao
+      - author: Yangming Chen
+      - author: Guojun Li
+      - author: Ruwen Fan
+      - author: Haijia Shen
+      - author: Chengyu Dong
+      - author: Yao Wang
+      - author: Rui Shi
+      - author: Jiwu Shu
+      - author: Youyou Lu
+    pubname: The 24th USENIX Conference on File and Storage Technologies
+    pubnamebrief: FAST'26
+    year: 2026
+    link:
+    code:
+    type: conference
+    highlight: 1
 
 # P.S. 
 # All the publication lists are generated automatically, 
