@@ -23,6 +23,9 @@ news:
 # Describe the honors you have before.
 
 contests:
+  - title: MLSys 2026 AWS Trainium2/3 MoE Kernel Challenge
+    prize: 1st Place
+    year: 2026
   - title: ASPLOS / EuroSys 2025 contest on LLM inference optimization
     prize: 1st Place
     year: 2025
